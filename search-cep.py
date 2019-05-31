@@ -31,4 +31,9 @@ result = unescapeXml(result)
 find = 'CEP:</th'
 posicao = int(result.index(find) + len(find))
 result = result[posicao:posicao + 200]
+
+find = '<td width="150">'
+posicao = int(result.index(find) + len(find))
+result = result[posicao:posicao + 200]
+
 print(result)
