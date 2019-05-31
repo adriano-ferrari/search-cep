@@ -27,4 +27,8 @@ result = str(result)
 result = unescapeString(result)
 result = bytes(result, "iso=8859-1").decode("unicode_escape")
 result = unescapeXml(result)
+
+find = 'CEP:</th'
+posicao = int(result.index(find) + len(find))
+result = result[posicao:posicao + 200]
 print(result)
